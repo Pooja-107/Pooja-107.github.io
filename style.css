@@ -1,0 +1,438 @@
+/* =====================================================
+   Pooja's Portfolio - simple HTML + CSS only
+   Colours used:
+   Purple #6d28d9   Coral #ff5d73   Teal #0fb5a6
+   Yellow #ffc233   Blue #2f9bea    Navy #1e1b4b
+   ===================================================== */
+
+/* ---------- 1. General settings ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;      /* padding is included in width */
+}
+
+html {
+  scroll-behavior: smooth;     /* smooth scrolling when a nav link is clicked */
+  scroll-padding-top: 70px;    /* keeps headings below the sticky navbar */
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d2a4a;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- 2. Navigation bar ---------- */
+.navbar {
+  position: sticky;            /* stays at the top while scrolling */
+  top: 0;
+  z-index: 10;
+  display: flex;               /* logo on the left, links on the right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 8%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(30, 27, 75, 0.1);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: #6d28d9;
+  text-decoration: none;
+}
+
+.navbar nav a {
+  margin-left: 6px;
+  padding: 8px 14px;
+  color: #2d2a4a;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar nav a:hover {
+  background-color: #6d28d9;
+  color: #ffffff;
+}
+
+/* ---------- 3. Hero section ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 70px 8%;
+  background: linear-gradient(135deg, #efe8ff, #ffe9ed 60%, #fff4d6);
+}
+
+.hero-text {
+  width: 55%;
+}
+
+.hello {
+  font-size: 20px;
+  font-weight: 500;
+  color: #6d28d9;
+}
+
+.hero h1 {
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1e1b4b;
+}
+
+.tagline {
+  margin: 8px 0 16px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff5d73;
+}
+
+.intro {
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* small coloured labels */
+.tags {
+  margin-bottom: 26px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 6px 8px 0;
+  padding: 4px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.tag-purple { background-color: #6d28d9; }
+.tag-teal   { background-color: #0fb5a6; }
+.tag-coral  { background-color: #ff5d73; }
+
+/* Profile photo: a round photo inside a coloured ring */
+.hero-photo {
+  width: 40%;
+  text-align: center;
+}
+
+.photo-ring {
+  display: inline-block;
+  padding: 10px;
+  background: linear-gradient(135deg, #6d28d9, #ff5d73, #ffc233);
+  border-radius: 50%;
+  box-shadow: 0 15px 35px rgba(109, 40, 217, 0.3);
+}
+
+.photo-ring img {
+  display: block;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;           /* crops the photo neatly into the circle */
+  object-position: top;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+/* ---------- 4. Buttons ---------- */
+.btn {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  padding: 12px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);            /* button moves up a little */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main {
+  background-color: #ff5d73;
+  color: #ffffff;
+}
+
+.btn-outline {
+  border-color: #6d28d9;
+  color: #6d28d9;
+}
+
+.btn-light {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ---------- 5. Common section styles ---------- */
+.section {
+  padding: 80px 0;
+}
+
+.container {
+  width: 84%;
+  max-width: 1050px;
+  margin: 0 auto;              /* centres the content */
+}
+
+.section-title {
+  display: inline-block;
+  margin-bottom: 36px;
+  padding-bottom: 6px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e1b4b;
+  border-bottom: 5px solid #ff5d73;
+}
+
+.section-title.light {
+  color: #ffffff;
+  border-bottom-color: #ffc233;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e1b4b;
+}
+
+/* ---------- 6. About ---------- */
+.about {
+  background-color: #ffffff;
+}
+
+.about-text {
+  max-width: 750px;
+  font-size: 18px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+}
+
+/* ---------- 7. Education ---------- */
+.education {
+  background-color: #fff4d6;
+}
+
+.edu-card {
+  padding: 30px;
+  background-color: #ffffff;
+  border-top: 8px solid #ffc233;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(30, 27, 75, 0.12);
+}
+
+.edu-year {
+  font-weight: 600;
+  color: #ff5d73;
+}
+
+.edu-college {
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #6d28d9;
+}
+
+.edu-label {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* ---------- 8. Cards and small chips (used in several sections) ---------- */
+.card-grid {
+  display: grid;                          /* 3 equal columns */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.chip {
+  display: inline-block;
+  margin: 4px 6px 4px 0;
+  padding: 4px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.chip-purple { background-color: #efe8ff; color: #6d28d9; }
+.chip-coral  { background-color: #ffe6ea; color: #d6334b; }
+.chip-teal   { background-color: #dcf7f3; color: #08857a; }
+.chip-blue   { background-color: #e0f1ff; color: #1a74bd; }
+.chip-yellow { background-color: #fff0c2; color: #8a6200; }
+
+/* ---------- 9. Skills ---------- */
+.skills {
+  background-color: #fbf9ff;
+}
+
+/* Skills: 2 x 2 grid on laptops (overrides the 3-column .card-grid) */
+.skills-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill-card {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(30, 27, 75, 0.1);
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+}
+
+.border-purple { border-top: 6px solid #6d28d9; }
+.border-coral  { border-top: 6px solid #ff5d73; }
+.border-blue   { border-top: 6px solid #2f9bea; }
+.border-yellow { border-top: 6px solid #ffc233; }
+
+/* ---------- 10. Interests ---------- */
+.interests {
+  background-color: #ffe6ea;
+}
+
+.interest-card {
+  padding: 28px 16px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(30, 27, 75, 0.1);
+  transition: transform 0.3s;
+}
+
+.interest-card:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 42px;
+}
+
+/* ---------- 11. Contact ---------- */
+.contact {
+  background-color: #1e1b4b;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact-text {
+  margin-bottom: 26px;
+  font-size: 18px;
+  color: #d8d4f5;
+}
+
+.email-text {
+  margin-top: 14px;
+  font-weight: 600;
+  color: #ffc233;
+}
+
+/* ---------- 12. Footer ---------- */
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #cfcaf0;
+  background-color: #141236;
+}
+
+/* ---------- 13. Tablet screens (up to 900px wide) ---------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;       /* photo goes above the text */
+    text-align: center;
+    padding: 50px 6%;
+  }
+
+  .hero-text,
+  .hero-photo {
+    width: 100%;
+  }
+
+  .intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr 1fr;       /* 2 columns */
+  }
+}
+
+/* ---------- 14. Phone screens (up to 600px wide) ---------- */
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 110px;
+  }
+
+  .navbar {
+    flex-direction: column;               /* logo above the links */
+    padding: 10px 4%;
+  }
+
+  .navbar nav {
+    text-align: center;
+  }
+
+  .navbar nav a {
+    margin: 2px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .photo-ring img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .tagline {
+    font-size: 20px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;           /* 1 column */
+  }
+}
