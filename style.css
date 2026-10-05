@@ -71,7 +71,7 @@ img {
   justify-content: space-between;
   gap: 40px;
   padding: 70px 8%;
-  background: linear-gradient(135deg, #efe8ff, #ffe9ed 60%, #fff4d6);
+  background-color: #ffe9ed;
 }
 
 .hero-text {
@@ -122,7 +122,15 @@ img {
 .tag-teal   { background-color: #0fb5a6; }
 .tag-coral  { background-color: #ff5d73; }
 
-/* Profile photo: a round photo inside a coloured ring */
+/* registration number - small and subtle, sits under the tags */
+.reg-no {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b6890;
+}
+
+/* Profile photo: a round photo inside a purple ring */
 .hero-photo {
   width: 40%;
   text-align: center;
@@ -131,7 +139,7 @@ img {
 .photo-ring {
   display: inline-block;
   padding: 10px;
-  background: linear-gradient(135deg, #6d28d9, #ff5d73, #ffc233);
+  background-color: #6d28d9;
   border-radius: 50%;
   box-shadow: 0 15px 35px rgba(109, 40, 217, 0.3);
 }
